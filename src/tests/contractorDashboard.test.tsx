@@ -3,7 +3,7 @@ import { render, screen, fireEvent } from '@testing-library/react';
 import { ContractorDashboard } from '../components/ContractorDashboard';
 import { MantisInteractionRecord } from '../types/mantis';
 
-describe('Contractor Dashboard Acceptance Tests', () => {
+describe('Bzzy Bee Dashboard Acceptance Tests', () => {
   const sampleRecord: MantisInteractionRecord = {
     id: 'mantis_test_123',
     timestamp: new Date().toISOString(),
@@ -32,6 +32,9 @@ describe('Contractor Dashboard Acceptance Tests', () => {
         onClearRecords={() => {}}
       />
     );
+
+    // Bzzy Bee Dashboard title
+    expect(screen.getByText(/Bzzy Bee Dashboard/i)).toBeInTheDocument();
 
     // Mock Provider Status
     expect(screen.getByText(/Mock Provider Status:/i)).toBeInTheDocument();

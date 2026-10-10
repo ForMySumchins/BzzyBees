@@ -46,7 +46,7 @@ export const App: React.FC = () => {
             <div className="hidden sm:block border-l border-slate-800 pl-3">
               <h1 className="text-sm font-bold leading-none">Offline Conversational Concierge</h1>
               <p className="text-[11px] text-slate-400 mt-0.5">
-                Mantis Evidence &bull; UCD Configuration &bull; Field Operator
+                Mantis Evidence &bull; UCD Configuration &bull; Bzzy Bee Operator
               </p>
             </div>
           </div>
@@ -113,12 +113,12 @@ export const App: React.FC = () => {
           />
         </section>
 
-        {/* Contractor Field Operator Column */}
+        {/* Bzzy Bee Operator Column */}
         <section className="flex flex-col h-full">
           <div className="mb-2 flex items-center justify-between">
             <h2 className="text-xs font-bold uppercase tracking-wider text-slate-500 flex items-center space-x-1">
               <Activity className="w-4 h-4 text-emerald-500" />
-              <span>2. Field Operator Queue</span>
+              <span>2. Bzzy Bee Queue</span>
             </h2>
             <span className="text-[11px] bg-emerald-100 text-emerald-800 px-2 py-0.5 rounded font-medium">
               Mantis Evidence &bull; Mock Adapter

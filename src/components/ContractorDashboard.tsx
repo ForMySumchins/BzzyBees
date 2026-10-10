@@ -71,14 +71,14 @@ export const ContractorDashboard: React.FC<ContractorDashboardProps> = ({
 
   return (
     <div className="bg-white rounded-xl shadow-lg border border-slate-200 overflow-hidden flex flex-col h-full">
-      {/* Field Operator Header */}
+      {/* Bzzy Bee Dashboard Header */}
       <div className="bg-slate-900 text-white p-4 border-b border-slate-800 flex flex-wrap items-center justify-between gap-3">
         <div className="flex items-center space-x-2">
           <Layers className="w-5 h-5 text-amber-400" />
           <div>
-            <h2 className="font-bold text-lg leading-none">Field Operator Dashboard</h2>
+            <h2 className="font-bold text-lg leading-none">Bzzy Bee Dashboard</h2>
             <p className="text-xs text-slate-300 mt-1">
-              Contractor Review Queue & Mantis Evidence Records
+              Operator Review Queue & Mantis Evidence Records
             </p>
           </div>
         </div>

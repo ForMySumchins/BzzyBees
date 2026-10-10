@@ -4,7 +4,7 @@ This repository contains the client-side CallShield concierge experience built f
 
 - **Mantis**: Captured, normalized interaction evidence schema and record management.
 - **Universal Client Data (UCD)**: Per-business configuration boundary controlling business personality, tone (formality, warmth, initiative), and trade capabilities.
-- **Field Operator**: Contractor-facing review queue, triage status display, and local follow-up handoff.
+- **Bzzy Bee Operator Queue**: Contractor/operator-facing review queue, triage status display, and local follow-up handoff.
 
 ---
 
@@ -15,7 +15,7 @@ This implementation operates strictly **100% offline** on the client side:
 - **Zero Third-Party Accounts / Credentials**: Requires no API keys, accounts, or tokens (`CREDENTIALS: NONE`).
 - **No Network Calls or Webhooks**: Provider adapter (`OfflineConciergeAdapter` and `OfflineRulesAdapter`) uses deterministic rules and fixtures only.
 - **No Telephony Operations**: No phone calls, SMS sending, call recordings, speech synthesis, or Twilio integrations.
-- **Local-Only Review Actions**: Review actions in the Field Operator panel ("Mark Reviewed", "Prepare Callback") update local browser state only without sending external network messages.
+- **Local-Only Review Actions**: Review actions in the Bzzy Bee Operator panel ("Mark Reviewed", "Prepare Callback") update local browser state only without sending external network messages.
 
 ---
 
@@ -36,7 +36,7 @@ This implementation operates strictly **100% offline** on the client side:
      2. **After-Hours AC Outage** -> `after_hours`
      3. **Routine Estimate / Maintenance** -> `routine_estimate`
 
-3. **Contractor Dashboard (Field Operator)**:
+3. **Bzzy Bee Operator Dashboard**:
    - Displays captured interaction queue with triage badges, consent status, and next best action.
    - Displays prominent **Mock Provider Status** banner (`Offline / Sandboxed`).
    - Local-only review actions ("Mark Reviewed", "Prepare Callback").
@@ -60,7 +60,7 @@ Navigate to `http://localhost:5173` (or the port indicated in terminal).
 ```bash
 npm test
 ```
-Executes all 6 test suites (8 unit/integration tests) covering disclosure, deterministic triage, consent gating, UCD personality switching, offline adapter isolation, and contractor dashboard rendering.
+Executes all 6 test suites (8 unit/integration tests) covering disclosure, deterministic triage, consent gating, UCD personality switching, offline adapter isolation, and Bzzy Bee dashboard rendering.
 
 ### Production Build
 ```bash
@@ -76,7 +76,7 @@ Compiles TypeScript and bundles static assets using Vite into `dist/`.
 - `src/types/`: Vocabulary type definitions (`ucd.ts`, `mantis.ts`, `fieldOperator.ts`, `concierge.ts`).
 - `src/adapters/`: `offlineRulesAdapter.ts` (deterministic triage) and `offlineConciergeAdapter.ts` (mock provider adapter).
 - `src/fixtures/`: `ucdFixtures.ts` (business profiles and scenario seeders).
-- `src/components/`: `ConciergeView.tsx` (customer UI) and `ContractorDashboard.tsx` (Field Operator UI).
+- `src/components/`: `ConciergeView.tsx` (customer UI) and `ContractorDashboard.tsx` (Bzzy Bee Operator UI).
 - `src/App.tsx`, `src/main.tsx`, `src/index.css`: App shell, layout, and styling.
 - `src/tests/`: Vitest test suites (`disclosure.test.tsx`, `triage.test.ts`, `consent.test.tsx`, `personality.test.ts`, `offlineAdapter.test.ts`, `contractorDashboard.test.tsx`).
 

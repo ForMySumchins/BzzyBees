@@ -414,7 +414,7 @@ export const ConciergeView: React.FC<ConciergeViewProps> = ({
           {activeFallback === 'callback' && (
             <div className="mt-2 bg-white p-2.5 rounded border border-amber-200 text-xs space-y-2">
               <p className="font-semibold text-slate-800">Request Human Callback (Offline Mock):</p>
-              <p className="text-slate-600">Clicking below queues a mock callback request in the contractor Field Operator panel without sending any SMS/call.</p>
+              <p className="text-slate-600">Clicking below queues a mock callback request in the Bzzy Bee Operator panel without sending any SMS/call.</p>
               {!fallbackSubmitted ? (
                 <button
                   onClick={() => handleFallbackSubmit('human_callback')}
@@ -425,7 +425,7 @@ export const ConciergeView: React.FC<ConciergeViewProps> = ({
               ) : (
                 <p className="text-emerald-700 font-semibold flex items-center space-x-1">
                   <CheckCircle2 className="w-4 h-4" />
-                  <span>Callback requested! Queued for Field Operator review.</span>
+                  <span>Callback requested! Queued for Bzzy Bee Operator review.</span>
                 </p>
               )}
             </div>
@@ -434,7 +434,7 @@ export const ConciergeView: React.FC<ConciergeViewProps> = ({
           {activeFallback === 'message' && (
             <div className="mt-2 bg-white p-2.5 rounded border border-amber-200 text-xs space-y-2">
               <p className="font-semibold text-slate-800">Leave Direct Message:</p>
-              <p className="text-slate-600">Your message will be logged directly into the Mantis evidence record for contractor follow-up.</p>
+              <p className="text-slate-600">Your message will be logged directly into the Mantis evidence record for operator follow-up.</p>
               {!fallbackSubmitted ? (
                 <button
                   onClick={() => handleFallbackSubmit('direct_message')}
